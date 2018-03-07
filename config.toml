@@ -1,0 +1,7 @@
+baseURL = "https://ceeds.life/"
+languageCode = "en-us"
+title = "Ceeds"
+
+[Params]
+  Author = "Ceeds"
+  description = "Let Your Ideas Grow"
