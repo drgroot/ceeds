@@ -14,5 +14,4 @@ before_script:
   - sudo cp rclone.conf ~/.config/rclone/.
   - sudo chmod 600 ~/.config/rclone/rclone.conf
 script:
-  - deploy_ceeds.sh
-  - echo "hi"
+  - ./deploy_ceeds.sh
