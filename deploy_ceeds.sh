@@ -19,9 +19,11 @@ cd $DIR && hugo --theme=detox
 cd $DIR/public
 cp $DIR/CNAME .
 git init
-git remote add origin git@github.com:drgroot/ceeds.git
+git remote add origin https://drgroot:$GITHUB_TOKEN@github.com/drgroot/ceeds.git
+git config user.name "Travis CI"
+git config user.email "travis@travisci.org"
+git config commit.gpgsign false
 git checkout --orphan gh-pages
 git add --all
-git config commit.gpgsign false
 git commit -m "Publishing to gh-pages"
 git push -f origin gh-pages
