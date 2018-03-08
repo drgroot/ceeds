@@ -1,6 +1,6 @@
 notifications:
   email: false
-language: generic
+language: node_js
 
 jobs:
   stage: deploy
@@ -11,6 +11,6 @@ jobs:
     - mkdir -p ~/.config/rclone/
     - cp rclone.conf ~/.config/rclone/rclone.conf
     - chmod 600 ~/.config/rclone/rclone.conf
+  before_script:
     - deploy_ceeds.sh
-  script:
     - echo "hi"
