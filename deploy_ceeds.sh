@@ -4,13 +4,12 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # perform git updates
 cd $DIR
-git pull origin master
 cd themes/detox && git pull origin master
 rm -rf $DIR/public/
 rm -rf $DIR/content/post/
 
 # copy posts over
-/usr/bin/rclone copy google:documents/ceeds/ $DIR/content/post/
+/usr/bin/rclone --config $DIR/rclone.conf copy google:documents/ceeds/ $DIR/content/post/
 
 # build content
 cd $DIR && hugo --theme=detox
