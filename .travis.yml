@@ -1,0 +1,15 @@
+notifications:
+  email: false
+
+jobs:
+  - stage: deploy
+  if: branch = master
+  before_install:
+    - openssl aes-256-cbc -K $encrypted_b46a5d04fea8_key -iv $encrypted_b46a5d04fea8_iv -in rclone.conf.enc -out rclone.conf -d
+    - sudo apt-get install -y curl unzip python python-pip hugo
+    - curl https://rclone.org/install.sh | sudo bash
+    - mkdir -p ~/.config/rclone/
+    - cp rclone.conf ~/.config/rclone/rclone.conf
+    - chmod 600 ~/.config/rclone/rclone.conf
+  script:
+    - ./deploy_ceeds.sh
