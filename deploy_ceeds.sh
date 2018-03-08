@@ -4,7 +4,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # perform git updates
 cd $DIR
-git pull origin master
 cd themes/detox && git pull origin master
 rm -rf $DIR/public/
 rm -rf $DIR/content/post/

@@ -1,6 +1,9 @@
 notifications:
   email: false
 language: generic
+branches:
+  only:
+    - master
 before_install:
   - openssl aes-256-cbc -K $encrypted_b46a5d04fea8_key -iv $encrypted_b46a5d04fea8_iv -in rclone.conf.enc -out rclone.conf -d
 install:
