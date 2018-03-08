@@ -12,7 +12,7 @@ install:
 before_script:
   - mkdir -p ~/.config/rclone/
   - sudo cp rclone.conf ~/.config/rclone/.
-  - chmod 600 ~/.config/rclone/rclone.conf
+  - sudo chmod 600 ~/.config/rclone/rclone.conf
 script:
   - deploy_ceeds.sh
   - echo "hi"
