@@ -1,5 +1,6 @@
 notifications:
   email: false
+language: generic
 
 jobs:
   stage: deploy
