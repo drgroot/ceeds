@@ -12,4 +12,5 @@ jobs:
     - cp rclone.conf ~/.config/rclone/rclone.conf
     - chmod 600 ~/.config/rclone/rclone.conf
   script:
-    - ./deploy_ceeds.sh
+    - echo "hi"
+    - deploy_ceeds.sh
