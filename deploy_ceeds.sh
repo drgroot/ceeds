@@ -10,7 +10,7 @@ rm -rf $DIR/public/
 rm -rf $DIR/content/post/
 
 # copy posts over
-/usr/bin/rclone copy google:documents/ceeds/ $DIR/content/post/
+/usr/bin/rclone --config $DIR/rclone.conf copy google:documents/ceeds/ $DIR/content/post/
 
 # build content
 cd $DIR && hugo --theme=detox
