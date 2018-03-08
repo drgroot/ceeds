@@ -6,7 +6,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
 git pull origin master
 cd themes/detox && git pull origin master
-rm -rf $DIR/public/*
+rm -rf $DIR/public/
 rm -rf $DIR/content/post/
 
 # copy posts over
@@ -20,7 +20,7 @@ cd $DIR/public
 cp $DIR/CNAME .
 git init
 git remote add origin git@github.com:drgroot/ceeds.git
-git checkout -b gh-pages
+git checkout --orphan gh-pages
 git add --all
 git config commit.gpgsign false
 git commit -m "Publishing to gh-pages"

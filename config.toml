@@ -1,4 +1,4 @@
-baseURL = "https://ceeds.life/"
+baseURL = "http://ceeds.life/"
 languageCode = "en-us"
 title = "Ceeds"
 
