@@ -1,6 +1,7 @@
 baseURL = "http://ceeds.life/"
 languageCode = "en-us"
 title = "Ceeds"
+disqusShortname = "ceeds"
 
 [Params]
   Author = "Ceeds"
