@@ -1,6 +1,9 @@
 <article class="{{ .Type }}">
 	<header class="post-header">
-        <h1 class="p-post-title">{{ .Title }}</h1>
+      <h1 class="p-post-title">{{ .Title }}</h1>
+      <meta http-equiv="cache-control" content="public" />
+      <meta http-equiv="cache-control" content="max-age=604800" />
+      <meta http-equiv="expires" content="604800" />
     </header>
 
     <section class="post-content">
