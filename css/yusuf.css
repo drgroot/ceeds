@@ -1,0 +1,21 @@
+img + em {
+  text-align: center;
+  display: block;
+  font-size: 95%;
+}
+img{
+  margin: auto;
+  max-height: 350px;
+}
+#site-header{
+  background-image: url("../logo.png");
+  background-repeat: no-repeat;
+  background-position: center 70%;
+
+  margin-bottom: 5em;
+}
+
+.blog-description{
+  margin-top:15%;
+  color: #333;
+}
